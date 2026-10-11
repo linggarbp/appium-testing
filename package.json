@@ -1,0 +1,38 @@
+{
+  "name": "appium-testing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Mobile end-to-end test framework for Android — Cucumber (Gherkin) + WebdriverIO v9 + Appium 3 (UiAutomator2), TypeScript, driving the public Swag Labs sample app",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "appium",
+    "webdriverio",
+    "cucumber",
+    "android",
+    "e2e-testing",
+    "test-automation",
+    "typescript"
+  ],
+  "scripts": {
+    "test": "cucumber-js",
+    "test:smoke": "cucumber-js --tags '@smoke'",
+    "test:regression": "cucumber-js --tags '@regression'",
+    "test:unit": "node --test test/unit/*.test.mjs",
+    "lint": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf test-results"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^12.9.0",
+    "dotenv": "^16.4.5",
+    "webdriverio": "^9.12.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.0"
+  }
+}
